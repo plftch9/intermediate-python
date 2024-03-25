@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../static/stylesheets/project6_stylesheet.css" rel="stylesheet">
+    <title>Scuba Stuff</title>
+</head>
+<body>
+    <div>
+        <div class="line"></div>
+        <header>
+            <nav>
+                <ul>
+                    <!-- intra-page links -->
+                    <li><a href="/">Home</a></li>
+                    <li><a href="adventures">Adventures</a></li>
+                    <li><a href="gear">Gear</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- Container div -->
+    <div class="welcome">
+        <h1>Scuba Divers Welcome!</h1>
+        <h2>Today is a Great Day for Scuba!</h2>
+        <h3>But Wait, What is Today?</h3>
+        <!-- for loop to show date -->
+        {% for x in today %}
+        <h3>Today's Date: {{ x }}</h3>
+        {% endfor %}
+        <h3>And What Time is it?</h3>
+        <!-- for loop to show time -->
+        {% for x in current_time %}
+        <h3>Current Time: {{ x }}</h3>
+        {% endfor %}
+
+    </div>
+    <!-- container div -->
+    <div class="container">
+        <!-- paragraph div -->
+        <div class="para">
+            <p>Scuba is a great way to explore places most other people will never see.</p>
+               <p> The ocean really is a beautiful place! Check out the link below to find out how to get certified.</p>
+            <!-- external site link -->
+            <a href="https://www.padi.com/education">Padi Website</a>
+        </div>
+    </div>
+</body>
+</html>

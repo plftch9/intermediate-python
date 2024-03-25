@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block body %}
+<header>
+  <nav>
+    <ul>
+      <!-- intra-page links -->
+      <li><a href="/">Home</a></li>
+      <li><a href="adventures">Adventures</a></li>
+      <li><a href="gear">Gear</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="register">Register</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div>
+  <img src="{{login_image}}" />
+</div>
+<div>
+  <form action="/login" method="post">
+    <input type="text" name="username" placeholder="Username" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="submit" />
+  </form>
+  {% if messages %}
+  <p class="error"><strong>Error:</strong>{{message}}</p>
+  {% endif %}
+</div>
+{% endblock %}

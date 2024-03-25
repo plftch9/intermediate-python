@@ -1,0 +1,65 @@
+body{
+    margin:4px;
+    width: 90%;
+    text-align: center;
+}
+
+header{
+    background-color: blue;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.list{
+    width: 50%;
+    align-items: center;
+    list-style-position: inside;
+}
+
+
+.title{
+    color:blue;
+}
+
+nav li{
+    display:inline-block;
+}
+
+nav a{
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 3px;
+    text-align: center;
+}
+
+.para{
+    background-color:aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.welcome{
+    padding: 5px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+th {
+    font-size: 13px;
+}
+
+td {
+    text-align: center;
+    font-size: 12px;
+}

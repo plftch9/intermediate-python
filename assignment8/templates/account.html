@@ -1,0 +1,30 @@
+{% extends "layout.html" %}{% block body %}
+<header>
+  <nav>
+    <ul>
+      <!-- intra-page links -->
+      <li><a href="/">Home</a></li>
+      <li><a href="adventures">Adventures</a></li>
+      <li><a href="gear">Gear</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="register">Register</a></li>
+      <li><a href="account">Account</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+  <div class="container">
+    {% from "_formhelper.html" import render_field %}
+    <form action="/account" method="post">
+      <dl>
+        {{render_field(form.old_secret)}}<br />
+        {{render_field(form.new_secret)}}
+      </dl>
+      <p><input type="submit" value="Register" /></p>
+    </form>
+    {% if messages %}
+    <p class="error"><strong>Error:</strong>{{message}}</p>
+    {% endif %}
+  </div>
+</body>
+{% endblock %}
